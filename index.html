@@ -12,8 +12,8 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://your-horror-domain.com/">
 
-  <!-- 引入 Google Fonts 恐怖字体 -->
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Special+Elite&display=swap" rel="stylesheet">
+  <!-- 引入 Google Fonts 恐怖字体库 -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -76,7 +76,7 @@
       padding: 15px 0; 
     }
 
-    /* 恐怖风格 Header */
+    /* Header 样式 */
     header { 
       display: flex;
       justify-content: space-between;
@@ -98,7 +98,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-family: 'Creepster', cursive, sans-serif; /* 使用恐怖哥特字体 */
+      font-family: 'Creepster', cursive, sans-serif; /* Logo 恐怖哥特风 */
       font-size: 2.1rem; 
       font-weight: normal; 
       color: #ff3333; 
@@ -132,15 +132,17 @@
       border: 1px solid rgba(255, 0, 0, 0.3);
     }
     
+    /* 顶部导航菜单：全应用 Creepster 恐怖字体 */
     .nav-links a {
-      color: #bbb;
+      font-family: 'Creepster', cursive, sans-serif;
+      color: #ccc;
       text-decoration: none;
-      font-weight: 600;
       margin-left: 15px;
-      font-size: 0.95rem;
-      transition: color 0.2s ease;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      transition: all 0.2s ease;
     }
-    .nav-links a:hover { color: #ff3333; text-shadow: 0 0 8px rgba(255, 0, 0, 0.8); }
+    .nav-links a:hover { color: #ff3333; text-shadow: 0 0 10px rgba(255, 0, 0, 0.9); }
 
     /* Hero Banner 惊悚横幅 */
     .hero-banner {
@@ -152,7 +154,7 @@
       box-shadow: 0 4px 20px rgba(255, 0, 0, 0.15);
     }
     .hero-banner h1 {
-      font-family: 'Nosifer', cursive, sans-serif; /* 使用滴血熔岩特效字体 */
+      font-family: 'Nosifer', cursive, sans-serif; /* 滴血熔岩字体 */
       font-size: 1.4rem;
       color: #ff3333;
       font-weight: normal;
@@ -166,7 +168,7 @@
       color: #888899;
     }
 
-    /* 分类标签栏 */
+    /* 分类标签栏：应用 Creepster 字体 */
     .category-bar {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -184,28 +186,34 @@
       padding: 14px 10px;
       border-radius: 10px;
       text-decoration: none;
-      color: #ddd;
-      font-weight: 700;
-      font-size: 1.05rem;
+      color: #eee;
+      font-family: 'Creepster', cursive, sans-serif; /* 分类按钮恐怖字体 */
+      font-size: 1.3rem;
+      letter-spacing: 1px;
       transition: all 0.25s ease;
       cursor: pointer;
     }
 
     .category-item:hover {
       border-color: #ff3333;
-      color: #ff4d4d;
+      color: #ff3333;
       background: #1a1012;
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.25);
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+      text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
     }
 
+    /* 栏目标题（如：Granny Horror Games Collection）：应用 Creepster 恐怖发光字体 */
     .section-title {
-      font-size: 1.35rem;
+      font-family: 'Creepster', cursive, sans-serif; /* 栏目标题恐怖字体 */
+      font-size: 1.7rem;
+      font-weight: normal;
       margin: 35px 0 15px 0;
-      color: #ff4d4d;
-      letter-spacing: 0.5px;
+      color: #ff3333;
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
       border-left: 4px solid #ff0000;
-      padding-left: 10px;
+      padding-left: 12px;
       scroll-margin-top: 20px;
     }
 
@@ -226,9 +234,12 @@
       margin-top: 40px;
     }
     .about-section h2 {
-      font-size: 1.3rem;
+      font-family: 'Creepster', cursive, sans-serif;
+      font-size: 1.5rem;
+      font-weight: normal;
       margin-bottom: 12px;
       color: #ff4d4d;
+      letter-spacing: 1px;
     }
     .about-section h3 {
       font-size: 1.05rem;
