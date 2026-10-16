@@ -2,16 +2,6 @@
 <html lang="en">
 <head>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26BKS5NW3H"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-26BKS5NW3H');
-  </script>
-  
   <!-- jQuery Dependencies (GameMonetize Requirement) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -45,9 +35,6 @@
     }
   }
   </script>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7325130017318424" crossorigin="anonymous"></script>
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -220,16 +207,6 @@
       text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
     }
 
-    /* 置顶广告位样式 */
-    .custom-ad-slot { 
-      margin: 15px 0 20px 0; 
-      text-align: center; 
-      min-height: 90px; 
-      background: #101014;
-      border-radius: 8px;
-      border: 1px dashed #333;
-    }
-
     .game-wrapper {
       position: relative;
       width: 100%;
@@ -364,18 +341,7 @@
       </a>
     </nav>
 
-    <!-- 💡 1. 顶部优先展示的广告位（放在游戏正上方） -->
-    <div class="custom-ad-slot" id="ad-slot-top">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-7325130017318424"
-           data-ad-slot="YOUR_AD_SLOT_ID"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <!-- 💡 2. 游戏窗口（紧跟在广告下方） -->
+    <!-- Game Window (Placed at Top) -->
     <div class="game-wrapper">
       <iframe src="https://html5.gamemonetize.games/yponinqihtbd9g8dglr27yj264o6nidq/" title="Evil Granny Must Die Ch1 Game" scrolling="no" allowfullscreen></iframe>
     </div>
