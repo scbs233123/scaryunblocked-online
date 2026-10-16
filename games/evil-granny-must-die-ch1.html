@@ -220,6 +220,16 @@
       text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
     }
 
+    /* 置顶广告位样式 */
+    .custom-ad-slot { 
+      margin: 15px 0 20px 0; 
+      text-align: center; 
+      min-height: 90px; 
+      background: #101014;
+      border-radius: 8px;
+      border: 1px dashed #333;
+    }
+
     .game-wrapper {
       position: relative;
       width: 100%;
@@ -241,15 +251,6 @@
       height: 100%;
       border: none;
       display: block;
-    }
-
-    .custom-ad-slot { 
-      margin: 15px 0; 
-      text-align: center; 
-      min-height: 90px; 
-      background: #101014;
-      border-radius: 8px;
-      border: 1px dashed #333;
     }
 
     .article-section { 
@@ -363,7 +364,7 @@
       </a>
     </nav>
 
-    <!-- Top Ad Slot -->
+    <!-- 💡 1. 顶部优先展示的广告位（放在游戏正上方） -->
     <div class="custom-ad-slot" id="ad-slot-top">
       <ins class="adsbygoogle"
            style="display:block"
@@ -374,7 +375,7 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <!-- Game Window (Placed at Top) -->
+    <!-- 💡 2. 游戏窗口（紧跟在广告下方） -->
     <div class="game-wrapper">
       <iframe src="https://html5.gamemonetize.games/yponinqihtbd9g8dglr27yj264o6nidq/" title="Evil Granny Must Die Ch1 Game" scrolling="no" allowfullscreen></iframe>
     </div>
