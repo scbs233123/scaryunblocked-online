@@ -57,18 +57,57 @@
     html { scroll-behavior: smooth; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
-    /* 升级版高级深渊感黑底：中心血色微光 + 四周暗角压黑 + 隐蔽恐怖纹理 */
+    /* 升级版高级深渊感黑底：中心血色微光 + 四周暗角压黑 */
     body { 
       background-color: #050507; 
       background-image: 
-        radial-gradient(circle at 50% 15%, rgba(139, 0, 0, 0.12), transparent 60%),
-        radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.85) 90%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='10' y='30' font-size='16' opacity='0.02' fill='%23ff0000'%3E💀%3C/text%3E%3Ctext x='60' y='70' font-size='16' opacity='0.02' fill='%23ff0000'%3E🩸%3C/text%3E%3C/svg%3E");
-      background-repeat: repeat;
+        radial-gradient(circle at 50% 15%, rgba(139, 0, 0, 0.15), transparent 60%),
+        radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.9) 90%);
       background-attachment: fixed;
       color: #d1d1d6; 
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
       line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* 背景漂浮恐怖 Emoji 动画层 */
+    .horror-bg-emojis {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .floating-emoji {
+      position: absolute;
+      font-size: 1.8rem;
+      opacity: 0.08; /* 若隐若现的幽暗感，不刺眼 */
+      animation: floatEmoji 15s infinite linear;
+    }
+
+    /* 随机位置与动画延迟配置 */
+    .floating-emoji:nth-child(1) { top: 10%; left: 5%; animation-duration: 18s; animation-delay: 0s; }
+    .floating-emoji:nth-child(2) { top: 25%; right: 8%; animation-duration: 22s; animation-delay: 2s; font-size: 2.2rem; }
+    .floating-emoji:nth-child(3) { top: 50%; left: 10%; animation-duration: 16s; animation-delay: 4s; }
+    .floating-emoji:nth-child(4) { top: 75%; right: 12%; animation-duration: 20s; animation-delay: 1s; font-size: 2.5rem; }
+    .floating-emoji:nth-child(5) { top: 90%; left: 15%; animation-duration: 25s; animation-delay: 3s; }
+    .floating-emoji:nth-child(6) { top: 40%; right: 20%; animation-duration: 19s; animation-delay: 5s; }
+
+    @keyframes floatEmoji {
+      0% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-30px) rotate(15deg);
+      }
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
     }
 
     .container { 
@@ -76,6 +115,8 @@
       max-width: 1200px; 
       margin: 0 auto; 
       padding: 15px 0; 
+      position: relative;
+      z-index: 1;
     }
 
     /* Header 样式 */
@@ -100,7 +141,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-family: 'Creepster', cursive, sans-serif; /* Logo 恐怖哥特风 */
+      font-family: 'Creepster', cursive, sans-serif; 
       font-size: 2.1rem; 
       font-weight: normal; 
       color: #ff3333; 
@@ -134,7 +175,7 @@
       border: 1px solid rgba(255, 0, 0, 0.3);
     }
     
-    /* 顶部导航菜单：全应用 Creepster 恐怖字体 */
+    /* 顶部导航菜单 */
     .nav-links a {
       font-family: 'Creepster', cursive, sans-serif;
       color: #ccc;
@@ -156,7 +197,7 @@
       box-shadow: 0 4px 20px rgba(255, 0, 0, 0.15);
     }
     .hero-banner h1 {
-      font-family: 'Nosifer', cursive, sans-serif; /* 滴血熔岩字体 */
+      font-family: 'Nosifer', cursive, sans-serif; 
       font-size: 1.4rem;
       color: #ff3333;
       font-weight: normal;
@@ -170,7 +211,7 @@
       color: #888899;
     }
 
-    /* 分类标签栏：应用 Creepster 字体 */
+    /* 分类标签栏 */
     .category-bar {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -189,7 +230,7 @@
       border-radius: 10px;
       text-decoration: none;
       color: #eee;
-      font-family: 'Creepster', cursive, sans-serif; /* 分类按钮恐怖字体 */
+      font-family: 'Creepster', cursive, sans-serif; 
       font-size: 1.3rem;
       letter-spacing: 1px;
       transition: all 0.25s ease;
@@ -205,9 +246,9 @@
       text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
     }
 
-    /* 栏目标题：应用 Creepster 恐怖发光字体 */
+    /* 栏目标题 */
     .section-title {
-      font-family: 'Creepster', cursive, sans-serif; /* 栏目标题恐怖字体 */
+      font-family: 'Creepster', cursive, sans-serif; 
       font-size: 1.7rem;
       font-weight: normal;
       margin: 35px 0 15px 0;
@@ -316,17 +357,27 @@
 </head>
 <body>
 
+  <!-- 背景漂浮恐怖 Emoji 层 -->
+  <div class="horror-bg-emojis">
+    <span class="floating-emoji">💀</span>
+    <span class="floating-emoji">👻</span>
+    <span class="floating-emoji">🩸</span>
+    <span class="floating-emoji">🕷️</span>
+    <span class="floating-emoji">🦇</span>
+    <span class="floating-emoji">🎃</span>
+  </div>
+
   <div class="container">
     <header>
       <div class="brand-zone">
-        <a href="https://your-horror-domain.com/" class="logo">
+        <a href="https://scbs233123.github.io/scaryunblocked-online/" class="logo">
           <span class="logo-icon">🩸</span>
           HORROR <span>GAME BOX</span>
         </a>
         <span class="welcome-text">💀 Free Unblocked Granny & Horror Escape Games for Chromebooks! 🔥</span>
       </div>
       <nav class="nav-links">
-        <a href="https://your-horror-domain.com/">Home</a>
+        <a href="https://scbs233123.github.io/scaryunblocked-online/">Home</a>
         <a href="#granny-games">Granny Games</a>
         <a href="#escape-games">Horror Escape</a>
         <a href="https://funnygamebox.com/" target="_blank" title="Visit Funny Game Box">Funny Games ↗</a>
@@ -354,7 +405,7 @@
     <!-- 🚪 2. 恐怖逃脱专区 (Scary Room Escape) -->
     <h2 class="section-title" id="escape-games">🚪 Scary Room Escape Games</h2>
     <div class="game-grid">
-      <!-- 准备好游戏链接后，在此放入恐怖逃脱相关的游戏卡片 -->
+      <!-- 准备好游戏链接后，isIn放入恐怖逃脱相关的游戏卡片 -->
     </div>
 
     <!-- SEO & GEO 文本段落 -->
