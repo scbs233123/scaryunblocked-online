@@ -57,14 +57,16 @@
     html { scroll-behavior: smooth; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
+    /* 升级版高级深渊感黑底：中心血色微光 + 四周暗角压黑 + 隐蔽恐怖纹理 */
     body { 
-      background-color: #08080a; 
+      background-color: #050507; 
       background-image: 
-        radial-gradient(circle at 50% 20%, rgba(255, 0, 0, 0.05), transparent 70%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='10' y='30' font-size='16' opacity='0.03' fill='%23ffffff'%3E👻%3C/text%3E%3Ctext x='60' y='70' font-size='16' opacity='0.03' fill='%23ffffff'%3E💀%3C/text%3E%3C/svg%3E");
+        radial-gradient(circle at 50% 15%, rgba(139, 0, 0, 0.12), transparent 60%),
+        radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.85) 90%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ctext x='10' y='30' font-size='16' opacity='0.02' fill='%23ff0000'%3E💀%3C/text%3E%3Ctext x='60' y='70' font-size='16' opacity='0.02' fill='%23ff0000'%3E🩸%3C/text%3E%3C/svg%3E");
       background-repeat: repeat;
       background-attachment: fixed;
-      color: #e0e0e0; 
+      color: #d1d1d6; 
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
       line-height: 1.6;
     }
@@ -203,7 +205,7 @@
       text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
     }
 
-    /* 栏目标题（如：Granny Horror Games Collection）：应用 Creepster 恐怖发光字体 */
+    /* 栏目标题：应用 Creepster 恐怖发光字体 */
     .section-title {
       font-family: 'Creepster', cursive, sans-serif; /* 栏目标题恐怖字体 */
       font-size: 1.7rem;
