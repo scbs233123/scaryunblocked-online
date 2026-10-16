@@ -207,6 +207,44 @@
       text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
     }
 
+    /* 置顶视频组件容器 */
+    .top-video-section {
+      background: #101014;
+      border: 1px solid #22222a;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .top-video-section h2 {
+      font-family: 'Creepster', cursive, sans-serif;
+      font-size: 1.5rem;
+      color: #ff4d4d;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    #gamemonetize-video-container {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      max-height: 60vh;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      isolation: isolate; 
+    }
+
+    #gamemonetize-video, 
+    #gamemonetize-video-container iframe {
+      width: 100% !important;
+      height: 100% !important;
+      border: none !important;
+      pointer-events: auto !important;
+      touch-action: manipulation !important;
+    }
+
     .game-wrapper {
       position: relative;
       width: 100%;
@@ -256,27 +294,6 @@
       font-size: 0.95rem; 
       color: #9999aa; 
       margin-bottom: 10px; 
-    }
-
-    #gamemonetize-video-container {
-      position: relative;
-      width: 100%;
-      height: 480px;
-      max-height: 60vh;
-      background: #000;
-      border-radius: 8px;
-      overflow: hidden;
-      margin-top: 15px;
-      isolation: isolate; 
-    }
-
-    #gamemonetize-video, 
-    #gamemonetize-video-container iframe {
-      width: 100% !important;
-      height: 100% !important;
-      border: none !important;
-      pointer-events: auto !important;
-      touch-action: manipulation !important;
     }
 
     footer { 
@@ -341,21 +358,9 @@
       </a>
     </nav>
 
-    <!-- Game Window (Placed at Top) -->
-    <div class="game-wrapper">
-      <iframe src="https://html5.gamemonetize.games/yponinqihtbd9g8dglr27yj264o6nidq/" title="Evil Granny Must Die Ch1 Game" scrolling="no" allowfullscreen></iframe>
-    </div>
-
-    <article class="article-section">
-      <h2>How to Play Evil Granny Must Die Ch1</h2>
-      <p>Survive the terrifying night in <strong>Evil Granny Must Die Ch1</strong> on Horror Game Box! Explore the creepy haunted house, find powerful weapons, collect secret escape keys, and outsmart the deadly Granny in your browser with zero downloads.</p>
-
-      <h2>Controls & Survival Strategy</h2>
-      <p>Use your keyboard and mouse to navigate through the dark corridors, locate hidden ammunition, and defend yourself when cornered.</p>
-      <p>Move quietly, check every dark corner, and solve puzzles to unlock the main doors before time runs out!</p>
-
-      <!-- Video Section -->
-      <h2>Video Walkthrough</h2>
+    <!-- 💡 1. 顶部 Video Walkthrough 视频板块 -->
+    <section class="top-video-section">
+      <h2>🎬 Video Walkthrough</h2>
       <div id="gamemonetize-video-container">
         <div id="gamemonetize-video"></div>
       </div>
@@ -373,6 +378,21 @@
               a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src = "https://api.gamemonetize.com/video.js", d.parentNode.insertBefore(a, d))
           })(document, "script", "gamemonetize-video-api"); 
       </script>
+    </section>
+
+    <!-- 💡 2. 游戏窗口（位于视频板块下方） -->
+    <div class="game-wrapper">
+      <iframe src="https://html5.gamemonetize.games/yponinqihtbd9g8dglr27yj264o6nidq/" title="Evil Granny Must Die Ch1 Game" scrolling="no" allowfullscreen></iframe>
+    </div>
+
+    <!-- 文章与玩法介绍 -->
+    <article class="article-section">
+      <h2>How to Play Evil Granny Must Die Ch1</h2>
+      <p>Survive the terrifying night in <strong>Evil Granny Must Die Ch1</strong> on Horror Game Box! Explore the creepy haunted house, find powerful weapons, collect secret escape keys, and outsmart the deadly Granny in your browser with zero downloads.</p>
+
+      <h2>Controls & Survival Strategy</h2>
+      <p>Use your keyboard and mouse to navigate through the dark corridors, locate hidden ammunition, and defend yourself when cornered.</p>
+      <p>Move quietly, check every dark corner, and solve puzzles to unlock the main doors before time runs out!</p>
     </article>
 
     <footer>
