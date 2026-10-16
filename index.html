@@ -71,7 +71,7 @@
       overflow-x: hidden;
     }
 
-    /* 背景漂浮恐怖 Emoji 动画层 */
+    /* 背景漂浮恐怖 Emoji 动画层（调高亮度与发光，确保在黑底上清晰可见） */
     .horror-bg-emojis {
       position: fixed;
       top: 0;
@@ -79,18 +79,18 @@
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: -1;
+      z-index: 0;
       overflow: hidden;
     }
 
     .floating-emoji {
       position: absolute;
-      font-size: 1.8rem;
-      opacity: 0.08; /* 若隐若现的幽暗感，不刺眼 */
+      font-size: 2rem;
+      opacity: 0.22; /* 调高透明度，清晰可见 */
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.6); /* 带有血红色微光特效 */
       animation: floatEmoji 15s infinite linear;
     }
 
-    /* 随机位置与动画延迟配置 */
     .floating-emoji:nth-child(1) { top: 10%; left: 5%; animation-duration: 18s; animation-delay: 0s; }
     .floating-emoji:nth-child(2) { top: 25%; right: 8%; animation-duration: 22s; animation-delay: 2s; font-size: 2.2rem; }
     .floating-emoji:nth-child(3) { top: 50%; left: 10%; animation-duration: 16s; animation-delay: 4s; }
@@ -99,15 +99,9 @@
     .floating-emoji:nth-child(6) { top: 40%; right: 20%; animation-duration: 19s; animation-delay: 5s; }
 
     @keyframes floatEmoji {
-      0% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-30px) rotate(15deg);
-      }
-      100% {
-        transform: translateY(0px) rotate(0deg);
-      }
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(15deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
     }
 
     .container { 
@@ -357,7 +351,7 @@
 </head>
 <body>
 
-  <!-- 背景漂浮恐怖 Emoji 层 -->
+  <!-- 背景漂浮恐怖 Emoji 层（带血色微光） -->
   <div class="horror-bg-emojis">
     <span class="floating-emoji">💀</span>
     <span class="floating-emoji">👻</span>
@@ -405,7 +399,7 @@
     <!-- 🚪 2. 恐怖逃脱专区 (Scary Room Escape) -->
     <h2 class="section-title" id="escape-games">🚪 Scary Room Escape Games</h2>
     <div class="game-grid">
-      <!-- 准备好游戏链接后，isIn放入恐怖逃脱相关的游戏卡片 -->
+      <!-- 准备好游戏链接后，在此放入恐怖逃脱相关的游戏卡片 -->
     </div>
 
     <!-- SEO & GEO 文本段落 -->
